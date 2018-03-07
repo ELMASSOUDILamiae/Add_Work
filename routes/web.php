@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/welcome', "AnnonceController@index");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
