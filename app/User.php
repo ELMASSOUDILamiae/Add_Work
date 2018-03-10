@@ -26,4 +26,27 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+/*
+  The table associated with the model.
+
+  */
+
+    protected  $table="useres";
+
+    public function admins()
+{
+    return $this->hasOne('App\Admin'); // we have one user as an admin
+}
+
+    public function entreprises()
+{
+    return $this->hasMany('App\Entreprise'); // we have multipe users as entreprise
+}
+
+    public function etudiants()
+{
+    return $this->hasMany('App\Etudiant'); // we have multipe users as student
+}
+
+
 }
