@@ -30,6 +30,13 @@ class RegisterController extends Controller
     protected $redirectTo = '/home';
 
     /**
+     *Values that the type field could take
+     *
+     *@var string
+     */
+    protected $type_values  = 'student,company';
+
+    /**
      * Create a new controller instance.
      *
      * @return void
@@ -51,6 +58,7 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'type'=>'required|in:'.$this->type_values,
         ]);
     }
 
@@ -66,6 +74,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'type' => $data['type'],
         ]);
     }
 }

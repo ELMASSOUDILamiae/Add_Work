@@ -6,11 +6,15 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+<<<<<<< HEAD
     'App\\Admin' => $baseDir . '/app/Admin.php',
     'App\\Annonce' => $baseDir . '/app/Annonce.php',
     'App\\Article' => $baseDir . '/app/Article.php',
     'App\\Choix' => $baseDir . '/app/Choix.php',
     'App\\Collection' => $baseDir . '/app/Collection.php',
+=======
+    'App\\Annonce' => $baseDir . '/app/Annonce.php',
+>>>>>>> eeb35bec490ce5615a4edce70aef776a71b00d47
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Cv' => $baseDir . '/app/Cv.php',
     'App\\CvCollection' => $baseDir . '/app/CvCollection.php',
@@ -3223,6 +3227,7 @@ return array(
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
+    'UserTableSeeder' => $baseDir . '/database/seeds/UserTableSeeder.php',
     'Webmozart\\Assert\\Assert' => $vendorDir . '/webmozart/assert/src/Assert.php',
     'Whoops\\Exception\\ErrorException' => $vendorDir . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
     'Whoops\\Exception\\Formatter' => $vendorDir . '/filp/whoops/src/Whoops/Exception/Formatter.php',

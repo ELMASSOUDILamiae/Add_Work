@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('type')->nullable();       //specification du user (admin, etudiant, entreprise)
-            $table->boolean('confirmed')->default(true); //etat du user confirmer(il peut s'authentifier) ou non
+            $table->boolean('confirmed')->default(true); //etat du user: confirmer(il peut s'authentifier) ou non
             $table->rememberToken();
             $table->timestamps();
         });
