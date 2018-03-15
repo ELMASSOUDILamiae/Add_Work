@@ -15,8 +15,9 @@ class CreateTestsTable extends Migration
     {
         Schema::create('tests', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('aw_libelle')->unique();
-            $table->integer('entreprises_id')->unsigned();
+            $table->string('aw_libelle');
+            $table->longText('aw_core');
+            $table->integer('entreprise_id')->unsigned();
             $table->timestamps();
         });
     }

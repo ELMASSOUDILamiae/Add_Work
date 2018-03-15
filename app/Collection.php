@@ -23,4 +23,11 @@ public function cvs()
 {
 return $this->belongsToMany('App\Cv','CvCollection');
 }
+    /**
+     * Get the entreprise that owns the collection.
+     */
+public function enterprise()
+{
+    return $this->belongsTo('App\enterprise');
+}
 }

@@ -16,7 +16,10 @@ class CreateEntreprisesTable extends Migration
         Schema::create('entreprises', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->integer('collection_id')->unsigned();
+            // $table->integer('collection_id')->unsigned();
+            // a company may haaaave many collections not only one
+            // a collection belongs to one and only one company
+
             $table->timestamps();
         });
     }

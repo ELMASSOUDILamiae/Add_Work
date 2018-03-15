@@ -6,23 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Entreprise extends Model
 {
-    //
-
-
-    /**
-     * Get the collection that owns the enterprise.
-     */
-    public function collection()
-    {
-        return $this->belongsTo('App\Collection');
-    }
-
     /**
     * Get the eannonce for the blog entreprise.
     */
    public function eannonces()
    {
-       return $this->hasMany('App\Eannonce');
+       return $this->hasMany('App\eannonce');
    }
 
    /**
@@ -32,5 +21,12 @@ class Entreprise extends Model
   {
       return $this->hasMany('App\Test');
   }
+/**
+ * the collections of the given entreprise.
+ */
+public function collections()
+{
+    return $this->hasMany('App\Collection');
+}
 
 }

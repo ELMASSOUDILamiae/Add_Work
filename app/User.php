@@ -31,7 +31,7 @@ class User extends Authenticatable
 
   */
 
-    protected  $table="useres";
+    protected  $table="users";
 
     public function admins()
 {
@@ -47,6 +47,5 @@ class User extends Authenticatable
 {
     return $this->hasMany('App\Etudiant'); // we have multipe users as student
 }
-
 
 }

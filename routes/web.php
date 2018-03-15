@@ -15,8 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/welcome', "AnnonceController@index");
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// EntrepriseController's rootes
+Route::get('/Entreprise',"EntrepriseController@index")
+			->name('Entreprise')
+			->middleware('auth','isEntreprise');
+Route::get('/Mes-annonces',"EntrepriseController@show_annonces")
+            ->name('Mes-annonces')
+            ->middleware('auth','isEntreprise');
+
+

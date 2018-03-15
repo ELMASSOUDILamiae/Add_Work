@@ -1,9 +1,12 @@
 <?php
 
 use App\User;
+use App\Admin;
+use App\Entreprise;
+use App\Etudiant;
 use Illuminate\Database\Seeder;
 
-class UserTableSeeder extends Seeder
+class UsersTableSeeder extends Seeder
 {
     /**
      * Seeder for users table
@@ -24,6 +27,10 @@ class UserTableSeeder extends Seeder
         	  'type'=>"admin",
         	]);
 
+        $Admin = Admin::Create([
+                'user_id' => $userAdmin->id,
+            ]);
+
 
         $userStudent = User::Create([
         	  'name'=> "student1",
@@ -32,6 +39,10 @@ class UserTableSeeder extends Seeder
         	  'type'=>"student",
         	]);
 
+        $Student = Etudiant::Create([
+                "user_id" => $userStudent->id,
+            ]);
+
 
         $userCompany = User::Create([
         	  'name'=> "company1",
@@ -39,5 +50,9 @@ class UserTableSeeder extends Seeder
         	  'password'=>bcrypt('123456'),
         	  'type'=>"company",
         	]);
+
+        $company = Entreprise::create([
+                'user_id' => $userCompany->id,
+            ]);
     }
 }

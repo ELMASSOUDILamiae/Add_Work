@@ -15,7 +15,8 @@ class CreateChoixesTable extends Migration
     {
         Schema::create('choixes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('aw_core');
+            $table->longText('aw_core');
+            $table->boolean('aw_stat');
             $table->integer('question_id')->unsigned();
             $table->timestamps();
         });

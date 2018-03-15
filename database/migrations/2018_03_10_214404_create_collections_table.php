@@ -16,6 +16,7 @@ class CreateCollectionsTable extends Migration
         Schema::create('collections', function (Blueprint $table) {
             $table->increments('id');
             $table->boolean('aw_etat');
+            $table->integer('entreprise_id')->unsigned();
             $table->timestamps();
         });
     }
